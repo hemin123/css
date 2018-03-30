@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>天猫商城</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+	header{
+		width: 1010px;
+		height:40px;
+		background-color: #808080;
+		color: #000;
+		margin: 20px auto;	
+		position: fixed;
+		top: 10px;
+		left: 50%;
+		margin-left: -505px;
+
+	}
+	header ul li{
+		display: inline;
+		width: 202px;
+		margin: 25px 70px;
+		position: relative;
+		bottom: 3px;
+		border: 1px solid #000;
+	}
+	header ul{
+		margin-top: 12px;
+		position: fixed;
+	}	
+	header .box{
+		width: 202px;
+		height: 40px;
+		background-color: red;
+		float: left;
+		margin-left: 404px;
+	}
+	section    .imag {
+		width: 830px;
+		height: 440px;
+		background-image: url(./images/demo_00.gif);
+	/*	position: relative;
+		top: 100px;*/
+		margin: 0px auto;
+		margin-top: 100px;
+
+	}
+	section .imag a{
+			/*text-decoration: none;*/
+			/*margin-top: 200px;*/
+			
+			width: 400px;
+			height:600px;
+			/*position: relative;
+			top: 20px;*/
+			border: 1px solid #000;
+			background-image: url(./images/demo_01.gif);
+	}
+	section .imag  a: last-child{
+		
+		margin-top: 2000px;
+	}
+	section  .fix1{
+		width: 100px;
+		height: 200px;
+		background-color: red;
+		
+		position: fixed;
+		bottom: 200px;
+	}
+	section  .fix2{
+		width: 100px;
+		height: 200px;
+			background-color: red;
+		
+		position: fixed;
+		bottom: 200px;
+		right: 0px;
+	}
+	footer .neirong{
+		width: 1000px;
+		height: 1000px;
+		background-color: blue;
+		margin: 50px auto;
+	}
+	footer .top{
+		width: 80px;
+		height: 80px;
+		background-color: #999999;
+		text-align: center;
+		position: fixed;
+		bottom: 30px;
+		right: 30px;
+
+	}
+	footer .top a{
+	
+		position: relative;
+		top: 30px;
+		text-decoration: none;
+
+	}
+	</style>
+
+</head>
+<body>
+<header>
+	<div class="box"></div>
+	<ul>
+		<li class="d1">天猫会员</li>
+		<li class="d2">品牌街</li>
+		<li class="d3">电器城</li>
+		<li class="d4">营业厅</li>
+		<li class="d5">魅力惠</li>
+	</ul>
+</header>
+<section>
+	<div class="imag">
+		<a href="#"><img src="./images/demo_01.gif"> </a>
+		<a href="#"><img src="./images/demo_02.gif"> </a>
+		<a href="#"><img src="./images/demo_03.gif"> </a>
+		<a href="#"><img src="./images/demo_04.gif"> </a>
+		<a href="#"><img src="./images/demo_05.gif"> </a>
+		<a href="#"><img src="./images/demo_06.gif"> </a>
+		<a href="#"><img src="./images/demo_07.gif"> </a>
+	</div>
+	<div class="fix1"></div>
+	<div class="fix2"></div>
+</section>
+<footer>
+	<div class="neirong">内容</div>
+	<div class="top">
+		<a href="#top">回到顶部</a>
+
+	</div>
+</footer>
+</body>
+</html>
