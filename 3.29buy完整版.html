@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>天猫商城</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+	header{
+		width: 1010px;
+		height:40px;
+		background-color: #808080;
+		color: #000;
+		margin: 20px auto;	
+		position: fixed;
+		top: 10px;
+		left: 50%;
+		margin-left: -505px;
+		z-index: 99;
+
+	}
+	header ul li{
+		display: inline-block;
+						/*list-style:none;*/
+					/*与list-style去掉小圆点*/
+		width: 200px;
+	
+
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+	}
+	header ul{
+		/*margin-top: 12px;*/
+		position: fixed;
+	}	
+	header ul li:nth-child(3){
+		background-color: red;
+	}
+	header ul li:nth-child(3) img{
+		position: absolute;
+
+		top:-13px;
+		left:490px; 
+		
+	}
+	
+	section    .imag {
+		width: 830px;
+		height: 440px;
+		background-image: url(./images/demo_00.gif);
+	/*	position: relative;
+		top: 100px;*/
+		margin: 0px auto;
+		margin-top: 100px;
+		position: relative;
+		
+
+	}
+	section  .imag span{
+		display: inline-block;
+		width: 40px;
+		height: 60px;
+		line-height: 60px;
+		text-align: center;
+		background-color: #ada89b;
+		color: white;
+		font-size: 35px;
+
+	}
+	section .imag span:first-child{
+		position: absolute;
+		top:221px;
+		left: 0px;
+
+	}
+	section .imag span:nth-child(2){
+		position: absolute;
+		top:221px;
+		right: 0px;
+
+	}
+	section  .imag ul li{
+		display: inline-block;
+		list-style:none;
+		width: 31px;
+		height: 31px;
+		line-height: 31px;
+		text-align: center;
+		border: 1px solid #000;
+		background-color: #ada89b;
+		border-radius: 50%;
+		color: white;
+		margin-right: 1px;
+
+	}
+		section  .imag ul{
+			position: absolute;
+			bottom: 7px;
+			right: 9px;
+		}
+	
+	section  .fix1{
+		width: 100px;
+		height: 200px;
+		background-color: red;
+		
+		position: fixed;
+		bottom: 200px;
+	}
+	section  .fix2{
+		width: 100px;
+		height: 200px;
+			background-color: red;
+		
+		position: fixed;
+		bottom: 200px;
+		right: 0px;
+	}
+	footer .neirong{
+		width: 1000px;
+		height: 1000px;
+		background-color: blue;
+		margin: 50px auto;
+	}
+	
+	footer a span{
+		display: inline-block;
+		width: 80px;
+		height: 80px;
+		line-height: 80px;
+		text-align: center;
+		
+		background-color: #999999;
+		color: white;
+		
+
+	}
+	footer a{
+		position: fixed;
+		right: 20px;
+		bottom: 20px;
+	}
+	</style>
+
+</head>
+<body>
+<header>
+
+	<ul>
+		<li class="d1">天猫会员</li>
+		<li class="d2">品牌街</li>
+		<li class="d3">电器城
+		<img src=".\images\1.gif">
+		</li>
+		<li class="d4">营业厅</li>
+		<li class="d5">魅力惠</li>
+	</ul>
+</header>
+<section>
+	<div class="imag">
+	<span> <</span>
+	<span> ></span>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+	</div>
+	<div class="fix1"></div>
+	<div class="fix2"></div>
+</section>
+<footer>
+	<div class="neirong">内容</div>
+	
+		<a href="#top">
+			<span>回到顶部</span>
+		</a>
+
+	
+</footer>
+</body>
+</html>
