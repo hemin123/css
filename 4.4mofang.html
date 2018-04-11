@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>4,2小案例</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		.hed input ,.hed a{
+			position:fixed;
+			top: 0;
+			width: 20%;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			z-index: 7;
+		
+			}
+		
+		a{	font-style: ;
+			text-decoration: none;
+			font-size: 18px;
+			font-weight: 700;
+			color: white;
+			background-color: #2f2f2f;
+
+
+		}
+		.hed input{
+			width: 20%;
+			height: 50px;
+			opacity: 0;
+
+
+
+
+		}
+		#crt1 ,#crt1+a {
+			left: 0px;
+		}
+		#crt2 ,#crt2+a {
+				left: 20%;
+			}
+		#crt3 ,#crt3+a {
+				left: 40%;
+			}
+		#crt4 ,#crt4+a {
+				left: 60%;
+			}
+		#crt5 ,#crt5+a {
+				left: 80%;
+			}
+	.hed   input:checked + a{
+			color: #ff4c00;
+				}
+		.hed input:hover + a  {
+			color: gray;
+		}
+		
+		.hed input {
+			z-index: 100;
+/*-------------------------------*/
+			/*这一句非常难想到
+
+			，固定流中的元素，后定位的元素会覆盖前面定位的元素，为了点击时候点的是radio，不是a，必须加*/
+		}
+		.hed   input:checked:hover + a{
+				color: #ff4c00;
+			}
+
+			/*过渡需要触发，动画不需要触发*/
+
+	body{
+		height: 100%;
+		overflow: hidden;
+/*去滚动条*/
+	}
+	 html{
+		height: 100%;
+	}
+	.hed{
+		height: 100%;
+
+	}
+	.hed .zhong {
+		height: 100%;
+		margin-top: 40px;
+
+	}
+
+	.hed .zhong section{
+		width: 100% ;
+		height: 100%;
+		box-sizing: border-box;
+		/*background-color: pink;*/
+		background-size: 100%  100%;
+
+/*这样让图片全屏*/
+			}
+
+		#crt1:checked~.zhong{
+			transform: translateY(0%);
+		}
+		#crt2:checked ~ .zhong{
+			transform:translateY(-100%);
+			/*margin-top: -100%;*/
+			}
+		#crt3:checked ~ .zhong{
+			transform:translateY(-200%);
+			/*margin-top: -200%;*/
+					}
+		#crt4:checked ~ .zhong{
+			transform:translateY(-300%);
+			/*margin-top: -300%;*/
+					}
+		#crt5:checked ~ .zhong{
+			transform:translateY(-400%);
+			/*margin-top: -400%;*/
+					}
+		#nei1{
+			background-image: url(./images/t/1.png);
+		}	
+		#nei2{
+			background-image: url(./images/t/2.jpeg);
+		}	
+		#nei3{
+			background-image: url(./images/t/3.jpeg);
+		}	
+		#nei4{
+			background-image: url(./images/t/4.jpeg);
+		}	#nei5{
+			background-image: url(./images/t/5.jpeg);
+		}
+		
+		#crt1:checked ~ .zhong  #nei1 ,
+		#crt2:checked ~ .zhong   #nei2 ,
+		#crt3:checked ~ .zhong   #nei3 ,
+		#crt4:checked ~ .zhong   #nei4,
+		#crt5:checked ~ .zhong   #nei5
+		{
+			animation: sport 0.5s linear 0s   normal;
+		}
+
+		@keyframes sport{
+			from{
+					opacity: 0;
+			}
+			to{
+					opacity: 1;
+			}
+		}
+		/*----------------内容----------*/
+		#nei5  h3{
+			width: 100%;
+			height: 100px;
+			font-size: 23px;
+			color: blue;
+			line-height: 100px;
+			text-align: center;
+			margin-top: 30px;
+
+		}
+		#nei5 .email{
+			height: 60%;
+			width: 300px;
+			float: left;
+		
+			margin:0 auto;
+			background-color:white; 
+			margin-left: 20%;
+		}
+		#nei5 .email div{
+			width: 100%;
+			height:30%;
+			border-bottom: 1px solid gray;
+			/*line-height: 33.33%;*/
+			text-align: center;
+			margin-top: 20px;
+			display: inline-block;
+			color: gray;
+		}
+
+		#nei5 .biao{
+			height: 60%;
+			width: 300px;
+			float: left;
+			border: 1px solid #000;
+			background-color:white; 
+			margin-left: 10%;
+			box-sizing: border-box;
+		}
+		#nei5 .biao input{
+			box-sizing: border-box;
+			margin-left: 20px;
+			display: inline-block;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="hed">
+		<input type="radio" name="rad" id="crt1" checked="checked">
+		<a href="#">home</a>
+		<input type="radio" name="rad" id="crt2" >
+		<a href="#">Server</a>
+		<input type="radio" name="rad" id="crt3" >
+		<a href="#">About</a>
+		<input type="radio" name="rad" id="crt4" >
+		<a href="#">Team</a>
+		<input type="radio" name="rad" id="crt5" >
+		<a href="#">Contact Me</a>
+
+	<div class="zhong">
+			<section class="sec1" id="nei1">Home</section>
+			<section class="sec2" id="nei2">Service</section>
+			<section class="sec3" id="nei3">About</section>
+			<section class="sec4" id="nei4">Team</section>
+			<section class="sec5" id="nei5">
+				<h3>快来联系我吧!</h3>
+				<div class="email">
+					<div>
+						<p>我的邮箱</p>
+						<p>Mail:1565417293@qq.com</p>
+
+					</div>
+					<div>
+						<p>我的QQ</p>
+						<p>1565417293@qq.com</p>
+
+					</div>
+					<div>
+						<p>我的地址</p>
+						<p>许昌市魏都区八一路许昌学院</p>
+
+					</div>
+				</div>
+				<div class="biao">
+					<p>表单</p>
+					<input type="text" name="username" value="test
+			" id='username' list='names'>
+					<p>
+					<input type="text" name="" value="姓名"></p><p>
+					<input type="text" name="" value="E-mail">	</p><p>
+					<input type="number" name="" value="电话"></p><p>
+					<input type="text" name="" value="留言"></p>
+
+				</div>
+
+			</section>
+			
+	</div>
+
+
+	</div>
+
+</body>
+</html>
